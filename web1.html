@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        /* Smooth transition effect */
+        .navbar {
+            transition: top 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="navbar" class="navbar bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-5 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center">
+                <img src="college logo.png" alt="BTI Logo" class="w-48 h-auto">
+                <span class="ml-3 text-xl font-bold text-gray-900">BTI Bangalore</span>
+            </a>
+
+            <!-- Top Links -->
+            <div class="hidden lg:flex space-x-6 text-sm text-gray-700">
+                <span>VTU</span>
+                <span>NAAC</span>
+                <span>IIC</span>
+                <span>AICTE</span>
+                <span>IQAC</span>
+                <span>CET CODE E-204</span>
+                <span>COMED K E-020</span>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="bg-gray-900 text-white">
+            <div class="container mx-auto px-5 flex justify-between items-center py-3">
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Menu Items -->
+                <ul class="hidden lg:flex space-x-8 font-medium">
+                    <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Academics</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Facilities</a></li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="relative group">
+                        <a href="#" class="hover:text-gray-300">More Details</a>
+                        <ul
+                            class="absolute hidden group-hover:block bg-gray-800 text-white mt-2 py-2 rounded shadow-lg w-48">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Sub Link 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Sub Link 2</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Announcements</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Announcements-Feb</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-gray-900 text-white p-4">
+                <a href="#" class="block py-2">Home</a>
+                <a href="#" class="block py-2">About Us</a>
+                <a href="#" class="block py-2">Academics</a>
+                <a href="#" class="block py-2">Facilities</a>
+                <a href="#" class="block py-2">More Details</a>
+                <a href="#" class="block py-2">Gallery</a>
+                <a href="#" class="block py-2">Contact Us</a>
+                <a href="#" class="block py-2">Announcements</a>
+                <a href="#" class="block py-2">Announcements-Feb</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                // Show navbar when scrolling up
+                navbar.style.top = "0";
+            } else {
+                // Hide navbar when scrolling down
+                navbar.style.top = "-80px";
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+
+        // Mobile menu toggle
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+
+    <!-- Fullscreen Moving Background Images Section -->
+    <section class="relative w-full h-screen overflow-hidden">
+        <!-- Swiper Container -->
+        <div class="swiper movingImagesSwiper absolute inset-0 w-full h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="e6.jpg" alt="College Image 1" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="e1.jpg" alt="College Image 2" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="logocse.jpg" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <img src="vission.png" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <img src="mission.png" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <img src="e8.jpg" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                    <img src="e9.jpg" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Slide 8 -->
+                <div class="swiper-slide">
+                    <img src="e10.jpg" alt="College Image 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
+            <h1 id="animatedText" class="text-6xl font-extrabold text-yellow-300 transition-all duration-500">
+                Computer Science and Engineering
+            </h1>
+        </div>
+    </section>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Initialization -->
+    <script>
+        var swiper = new Swiper(".movingImagesSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000, // Change slide every 3 seconds
+                disableOnInteraction: false
+            },
+            effect: "fade",
+            speed: 1000
+        });
+
+        // Animated Text Glow Effect
+        function animateTextGlow() {
+            const textElement = document.getElementById("animatedText");
+            let colors = ["text-yellow-300", "text-red-300", "text-blue-300", "text-green-300"];
+            let index = 0;
+
+            setInterval(() => {
+                textElement.classList.remove(...colors);
+                textElement.classList.add(colors[index]);
+                textElement.classList.add("shadow-lg", "shadow-yellow-400");
+                setTimeout(() => textElement.classList.remove("shadow-lg", "shadow-yellow-400"), 500);
+                index = (index + 1) % colors.length;
+            }, 1500);
+        }
+
+        animateTextGlow();
+    </script>
+
+
+
+    <!-- HOD sir information -->
+    <section
+        class="text-gray-900 body-font bg-gradient-to-r from-yellow-200 to-pink-200 min-h-screen flex items-center">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap items-center -mx-4">
+
+                <!-- Left: HOD Image (Reduced size) -->
+                <div class="lg:w-1/3 w-full px-4 flex justify-center">
+                    <img src="hod sir.png" alt="Dr. Sreerama Reddy G M"
+                        class="w-[350px] h-auto object-cover rounded-lg shadow-xl transition-transform duration-300 hover:scale-105">
+                </div>
+
+                <!-- Right: Content Section (Increased Text Size) -->
+                <div class="lg:w-2/3 w-full px-4 flex flex-col justify-center">
+                    <h2 class="text-4xl font-extrabold text-center lg:text-left text-gray-900">Dr. Sreerama Reddy G M
+                    </h2>
+                    <div class="w-24 h-1 bg-green-500 rounded mx-auto lg:mx-0 my-3"></div>
+                    <p class="text-2xl text-center lg:text-left text-gray-700 font-semibold">Professor and HOD, CSE</p>
+
+                    <p class="leading-relaxed text-lg lg:text-xl mt-6 text-gray-800 text-center lg:text-left">
+                        The Computer Engineering Department stands as a beacon of <span
+                            class="text-blue-700 font-bold">innovation</span>
+                        and academic <span class="text-green-700 font-bold">excellence</span>, driving forward the
+                        frontiers of
+                        technology and shaping the future of computing.
+                        <br><br>
+                        Our department embodies a dynamic blend of <span class="text-red-700 font-bold">theoretical
+                            insights</span>
+                        and <span class="text-yellow-700 font-bold">practical applications</span>, fostering a vibrant
+                        learning
+                        environment for aspiring engineers and researchers.
+                        <br><br>
+                        As we look to the future, we remain committed to <span
+                            class="text-purple-700 font-bold">excellence</span>,
+                        <span class="text-orange-700 font-bold">innovation</span>, and <span
+                            class="text-indigo-700 font-bold">service</span>.
+                        We strive to shape a future where technology serves humanity and empowers individuals to create
+                        <span class="text-pink-700 font-bold">positive change</span> in the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Announcements -->
+    <!-- <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"> -->
+    <section class="bg-gradient-to-r from-yellow-200 to-pink-200 text-gray-900 body-font">
+        <div class="container px-5 py-10 mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Announcements</h2>
+            <p class="leading-relaxed text-lg">Stay updated with the latest news and important information.</p>
+            <div class="mt-4 bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium">📢 Upcoming event: Don't miss our live webinar on technology trends this
+                    Friday!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- vision and mission -->
+    <section class="text-gray-800 body-font bg-gradient-to-r from-yellow-200 to-pink-200">
+        <div class="container px-5 py-24 mx-auto">
+            <!-- Vision Section (Full Width) -->
+            <div class="w-full mb-12">
+                <div
+                    class="w-full bg-yellow-300 px-8 py-16 rounded-lg text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <h1 class="title-font text-3xl font-bold text-gray-900 mb-5">VISION</h1>
+                    <p class="text-xl leading-relaxed text-gray-900">
+                        To Excel in the emerging areas of Computer Engineering by imparting knowledge, equipping
+                        students with
+                        latest skills in the field of technology supplemented with practical orientation to face
+                        challenges in the
+                        fast-morphing modern computing industry and academia for the betterment of the society.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission Section (Full Width) -->
+            <div class="w-full">
+                <div
+                    class="w-full bg-blue-300 px-8 py-16 rounded-lg text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <h1 class="title-font text-3xl font-bold text-gray-900 mb-5">MISSION</h1>
+                    <ul class="text-xl text-left list-disc list-inside text-gray-900 max-w-5xl mx-auto">
+                        <li>Establish and maintain an effective operational environment.</li>
+                        <li>Deliver quality, prompt, cost-effective, and reliable technology services to society.</li>
+                        <li>Educate students in best practices and integrate the latest research into the curriculum.
+                        </li>
+                        <!-- <li>Enhance academic collaborations for national exposure.</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- points -->
+    <section class="py-12 px-6 bg-gradient-to-r from-yellow-200 to-pink-200">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">PROGRAM OUTCOMES (POs)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- PO 1: Engineering Knowledge -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-blue-500">📘</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Engineering Knowledge</h3>
+                        <p class="text-gray-700">Apply math, science, and engineering principles to solve real-world
+                            problems.</p>
+                    </div>
+                </div>
+
+                <!-- PO 2: Problem Analysis -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-green-500">🧠</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Problem Analysis</h3>
+                        <p class="text-gray-700">Identify and analyze complex engineering challenges effectively.</p>
+                    </div>
+                </div>
+
+                <!-- PO 3: Design Solutions -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-red-500">🎨</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Design Solutions</h3>
+                        <p class="text-gray-700">Develop innovative solutions with safety, health, and environment in
+                            mind.</p>
+                    </div>
+                </div>
+
+                <!-- PO 4: Investigations -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-purple-500">🔬</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Investigations</h3>
+                        <p class="text-gray-700">Use experiments and research to derive conclusions.</p>
+                    </div>
+                </div>
+
+                <!-- PO 5: Modern Tools -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-orange-500">💻</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Modern Tools</h3>
+                        <p class="text-gray-700">Utilize modern software and tools for effective engineering solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PO 6: Engineer & Society -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-yellow-500">🏛️</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Engineer & Society</h3>
+                        <p class="text-gray-700">Consider societal and ethical impacts in engineering solutions.</p>
+                    </div>
+                </div>
+
+                <!-- PO 7: Sustainability -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-teal-500">🌱</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Sustainability</h3>
+                        <p class="text-gray-700">Promote eco-friendly and sustainable development practices.</p>
+                    </div>
+                </div>
+
+                <!-- PO 8: Ethics -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-pink-500">⚖️</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Ethics</h3>
+                        <p class="text-gray-700">Follow ethical standards and professional integrity.</p>
+                    </div>
+                </div>
+
+                <!-- PO 9: Teamwork -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-indigo-500">🤝</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Teamwork</h3>
+                        <p class="text-gray-700">Work effectively in diverse teams and multidisciplinary projects.</p>
+                    </div>
+                </div>
+
+                <!-- PO 10: Communication -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-cyan-500">🗣️</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Communication</h3>
+                        <p class="text-gray-700">Express technical concepts clearly in verbal and written form.</p>
+                    </div>
+                </div>
+
+                <!-- PO 11: Project Management -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-gray-500">📊</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Project Management</h3>
+                        <p class="text-gray-700">Plan and execute projects with efficiency and financial awareness.</p>
+                    </div>
+                </div>
+
+                <!-- PO 12: Life-Long Learning -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4 hover:scale-105 transition duration-500">
+                    <span class="text-4xl text-green-600">📚</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Life-Long Learning</h3>
+                        <p class="text-gray-700">Stay updated with new technologies and trends in engineering.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LABORATORIES -->
+    <section class="text-gray-800 body-font bg-gradient-to-r from-yellow-200 to-pink-200">
+        <div class="container px-5 py-24 mx-auto">
+            <h1 class="text-3xl font-bold text-center text-gray-900 mb-12">LABORATORIES</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Data Structure Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab1.jpg" alt="Data Structure Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Data Structure Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Database Management System Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab2.jpg" alt="Database Management System Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Database Management System Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Operating System Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab3.jpg" alt="Operating System Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Genarative AI</h2>
+                    </div>
+                </div>
+
+                <!-- Data Science Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab4.jpg" alt="Data Science Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Machine Learning/Data Science Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Data Analytics with Excel Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab5.jpg" alt="Data Analytics with Excel Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Data Analytics with Excel Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Python Programming Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab6.jpg" alt="Python Programming Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Python Programming Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Object-Oriented with Java Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab7.jpg" alt="Object-Oriented with Java Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Object-Oriented with Java Laboratory</h2>
+                    </div>
+                </div>
+
+                <!-- Digital Image Processing Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab8.jpg" alt="Digital Image Processing Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">Digital design and MC Laboratory</h2>
+                    </div>
+                </div>
+                <!-- Digital Image Processing Laboratory -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-500">
+                    <img src="lab8.jpg" alt="Digital Image Processing Laboratory" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-gray-900">LaTex Laboratory</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Information Section -->
+    <section class="bg-gradient-to-r from-yellow-200 to-pink-200 py-16">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-10"><u>Distinguished Faculties</u></h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="i1.png" alt="	Dr. Payal Koolwal" class="w-48 h-48 mx-auto rounded-lg object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">Dr. Payal Koolwal</h3>
+                    <p class="text-gray-700 text-sm"><b>Expertise:</b> Cloud Computing,
+                        Image Processing,
+                        VLSI Design, Machine Leaning</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="i10.png" alt="Mr.Ratikanta  Majhi " class="w-48 h-48 mx-auto rounded-lg object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">Prof. Ratikanta Majhi </h3>
+                    <p class="text-gray-700 text-sm"><b>Expertise:</b>
+                        Machine Learning,Python,Data Science,DBMS,Java,Power BI</p>
+
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="i6.png" alt="Mrs. Neha Bhatt" class="w-48 h-48 mx-auto rounded-lg object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">Prof. Neha Bhatt</h3>
+                    <p class="text-gray-700 text-sm"><b>Expertise:</b> Machine Learning, Data Science, Data Mining and
+                        Warehousing, Big Data Analytics, Artificial Intelligence</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="shylaga.jpg" alt="Mrs Shylaja DN " class="w-48 h-48 mx-auto rounded-lg object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">Prof. Shylaja DN </h3>
+                    <p class="text-gray-700 text-sm"><b>Expertise:</b> Cryptography,Theory of Automata,Cloud
+                        computing,ML,DL,Programming languages</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="i3.png" alt="Mrs. Anuradha Pai " class="w-48 h-48 mx-auto rounded-lg object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">Prof. Anuradha Pai </h3>
+                    <p class="text-gray-700 text-sm"><b>Expertise:</b>Operating System, DBMS, DevOps, Generative AI, NLP
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Gallery Section -->
+    <section class="text-gray-900 body-font bg-gradient-to-r from-yellow-200 to-pink-200 py-12">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-center mb-8">Event Gallery</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper eventSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="ga1.jpg" alt="Event 1" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="p1.png" alt="Event 2" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="ga3.jpg" alt="Event 3" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <img src="ga4.jpg" alt="Event 4" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <img src="e2.jpg" alt="Event 5" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide">
+                        <img src="e3.jpg" alt="Event 7" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="swiper-slide">
+                        <img src="e5.jpg" alt="Event 8" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="swiper-slide">
+                        <img src="e6.jpg" alt="Event 9" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="swiper-slide">
+                        <img src="e8.jpg" alt="Event 9" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 11 -->
+                    <div class="swiper-slide">
+                        <img src="e9.jpg" alt="Event 9" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                    <!-- Slide 12 -->
+                    <div class="swiper-slide">
+                        <img src="e10.jpg" alt="Event 9" class="rounded-lg shadow-lg w-full h-[250px] object-cover">
+                    </div>
+                </div>
+                <!-- Pagination and Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".eventSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 2500,  // Change slide every 2.5 seconds
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 15,
+                stretch: 0,
+                depth: 80,
+                modifier: 1,
+                slideShadows: false
+            }
+        });
+    </script>
+
+    <!-- youtube vedios -->
+    <section class="text-gray-900 body-font bg-gradient-to-r from-yellow-200 to-pink-200">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+                <!-- First Video Box -->
+                <div class="sm:w-1/2 mb-10 px-4">
+                    <div class="rounded-lg h-64 overflow-hidden bg-yellow-200 shadow-lg p-2">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/xC67fXKuHY8"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="title-font text-2xl font-bold text-gray-900 mt-6 mb-3">Computer Science</h2>
+                    <p class="leading-relaxed text-base">College campus overview.</p>
+                </div>
+
+                <!-- Second Video Box -->
+                <div class="sm:w-1/2 mb-10 px-4">
+                    <div class="rounded-lg h-64 overflow-hidden bg-red-200 shadow-lg p-2">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/wgpiTctxP5s"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="title-font text-2xl font-bold text-gray-900 mt-6 mb-3">Computer Expo</h2>
+                    <p class="leading-relaxed text-base">College festivals and college in/out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="text-gray-400 body-font bg-gray-800">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">About Us</h2>
+                    <nav class="list-none mb-10">
+                        <li><a class="text-gray-400 hover:text-gray-200">First Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Second Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Third Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Fourth Link</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Useful Links</h2>
+                    <nav class="list-none mb-10">
+                        <li><a class="text-gray-400 hover:text-gray-200">First Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Second Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Third Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Fourth Link</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Help</h2>
+                    <nav class="list-none mb-10">
+                        <li><a class="text-gray-400 hover:text-gray-200">First Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Second Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Third Link</a></li>
+                        <li><a class="text-gray-400 hover:text-gray-200">Fourth Link</a></li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="bg-gray-900">
+            <div class="container px-5 py-6 mx-auto flex flex-col sm:flex-row justify-between items-center">
+                <a class="flex title-font font-medium items-center text-white">
+                    <img src="college logo.png" alt="BTI Logo" class="w-48 h-auto mb-3 sm:mb-0">
+                    <span class="ml-3 text-xl">BTI College</span>
+                </a>
+
+                <p class="text-sm text-gray-400 sm:mt-0 mt-4">© 2025 BTI Bangalore —
+                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-300 ml-1"
+                        target="_blank">@knyttneve</a>
+                </p>
+
+                <!-- Location Section -->
+                <div class="text-white text-sm sm:text-right text-center">
+                    <h2 class="text-lg font-semibold">📍 Our Location</h2>
+                    <p>BTI College, Bangalore</p>
+                    <p>123, Main Street, Bangalore, India</p>
+                    <p>📞 +91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
